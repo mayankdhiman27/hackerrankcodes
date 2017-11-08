@@ -1,0 +1,22 @@
+void levelOrder(Node root) {
+       Queue<Node> q=new LinkedList<>();          //Queue to store nodes temporarily
+       if(root!=null)
+       {
+           Node temp=root;
+            q.add(temp);
+           
+           while(!q.isEmpty())
+           {
+                Node t=q.remove();
+               System.out.print(t.data+" ");
+               if(t.left!=null)
+               {
+                    q.add(t.left);
+               }
+               if(t.right!=null)
+               {
+                    q.add(t.right);
+               }
+           }
+       }      
+    }
